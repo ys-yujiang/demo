@@ -5,11 +5,11 @@ provider "aws" {
 variable "instance_type" {
   description = "AWS instance type"
   default     = "t2.nano"
-  count = 2
 }
 
 resource "aws_vpc" "main" {
   cidr_block = "10.0.0.0/16"
+  count = 2
 }
 
 resource "aws_subnet" "main" {
