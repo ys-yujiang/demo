@@ -5,6 +5,7 @@ provider "aws" {
 variable "instance_type" {
   description = "AWS instance type"
   default     = "t2.nano"
+  count = 2
 }
 
 resource "aws_vpc" "main" {
