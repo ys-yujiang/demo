@@ -72,5 +72,4 @@ resource "aws_instance" "machine1" {
     instance_type = "t2.micro"
     availability_zone = "us-east-1a"
     subnet_id = aws_subnet.main.id
-    count = 2
 }
