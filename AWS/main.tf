@@ -9,7 +9,6 @@ variable "instance_type" {
 
 resource "aws_vpc" "main" {
   cidr_block = "10.0.0.0/16"
-  count = 2
 }
 
 resource "aws_subnet" "main" {
@@ -73,4 +72,5 @@ resource "aws_instance" "machine1" {
     instance_type = "t2.micro"
     availability_zone = "us-east-1a"
     subnet_id = aws_subnet.main.id
+    count = 2
 }
